@@ -16,13 +16,13 @@ function App() {
       
       <ParticleBackground />
       <main>
-        <Hero />
-        <Stats />
-        <Skills />
-        <About />
-        <Projects />
-        <Footer />
-      </main>
+  <section id="home"><Hero /></section>
+  <section id="stats"><Stats /></section>
+  <section id="skills"><Skills /></section>
+  <section id="about"><About /></section>
+  <section id="projects"><Projects /></section>
+  <section id="phone"><Footer /></section>
+</main>
     </div>
   );
 }

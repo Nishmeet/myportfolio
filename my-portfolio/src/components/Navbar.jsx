@@ -10,12 +10,11 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-content">
         <div className="nav-links">
-          <a href="#home"><AiOutlineHome className="nav-icon" /></a>
-          <a href="#projects"><AiOutlineProject className="nav-icon" /> </a>
-          <a href="#skills"><BsPersonWorkspace className="nav-icon" /></a>
-          <a href="#tools"><AiOutlineTool className="nav-icon" /> </a>
-          {/* <a href="#contact" className="contact-btn"><RiContactsLine className="nav-icon" /></a> */}
-          <a href="#phone" className="contact-btn"><MdOutlineContactPhone className="nav-icon" /></a>
+          <a href="#home" data-tooltip="Home"><AiOutlineHome className="nav-icon" /></a>
+          <a href="#projects" data-tooltip="Projects"><AiOutlineProject className="nav-icon" /></a>
+        
+          <a href="#tools" data-tooltip="Tools"><AiOutlineTool className="nav-icon" /></a>
+          <a href="#phone" data-tooltip="Contact" ><MdOutlineContactPhone className="nav-icon" /></a>
         </div>
       </div>
     </nav>

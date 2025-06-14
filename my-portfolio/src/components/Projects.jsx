@@ -9,7 +9,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Real Estate Investment Calculator",
-      description: "This is a simple authentication system using Firebase. It allows users to sign up and sign in to the application nad if tss your birth.",
+      description: "The Real Estate Investment Calculator is a smart tool designed to help investors make data-driven property decisions. It analyzes key financial metrics such as ROI, cash flow, cap rate, and break-even points—giving users a clear picture of a property’s investment potential.",
       tech: ["JavaScript", "React", "Node.js", "Express", "Firebase"],
       demoLink: "https://nishmeet.github.io/Projectlogin/",
       codeLink: "https://github.com/nishmeet/Projectlogin",
@@ -26,9 +26,9 @@ const Projects = () => {
     },
     {
       title: "Portfolio App",
-      description: "A mock e-commerce website for consumers to purchase robots.",
+      description: "A sleek, responsive web portfolio designed to showcase my professional skills, projects, and accomplishments.",
       tech: ["JavaScript", "React", "Node.js", "Express", "PostgreSQL"],
-      demoLink: "https://nishmeet.github.io/Protfoliomygit/",
+      demoLink: " https://nishmeet.github.io/myportfolio/",
       codeLink: "https://github.com/Nishmeet/myportfolio.git",
       image: project3  // Use the imported image directly
     }
@@ -109,8 +109,8 @@ return (
           <p className="project-tech">{project.description}</p>
           
           <div className="project-links">
-    <a href="https://demo-link.com" target="_blank" rel="noopener noreferrer" className="project-link demo">Demo</a>
-    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="project-link code">Code</a>
+    <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link demo">Demo</a>
+    <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-link code">Code</a>
   </div>
             </div>
           </div>

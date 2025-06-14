@@ -163,6 +163,34 @@
   transform: translateY(-2px);
 }
 
+.contact-btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer !important;
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto !important;
+  background: linear-gradient(90deg, 0%, #00f2fe 100%);
+  color: #f2e4e4;
+  border: 2px solid #00f2fe;
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+  background: linear-gradient(90deg, 0%, #00f2fe 100%);
+  color: #f2e4e4;
+  border: 2px solid #00f2fe;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(247, 241, 222, 0.18);
+  outline: none;
+}
+
 @media (max-width: 1024px) {
   .about-container {
     grid-template-columns: 1fr;

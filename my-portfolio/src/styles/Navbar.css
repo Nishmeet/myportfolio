@@ -33,6 +33,37 @@
 .nav-icon:hover {
   transform: scale(1.2);
 }
+.nav-links a {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip styling */
+.nav-links a[data-tooltip]:hover::after,
+.nav-links a[data-tooltip]:focus::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%; /* Show above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #232323;
+  color: #fff;
+  padding: 0.35em 0.8em;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: opacity 0.2s;
+}
+
+.nav-links a[data-tooltip]::after {
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
 
 @media (max-width: 768px) {
   .navbar {

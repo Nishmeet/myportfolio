@@ -72,9 +72,11 @@ const About = () => {
             >
               {isDownloading ? 'Downloading...' : 'Download CV'}
             </button>
-            <a href="#contact" className="btn btn-secondary">
-              Contact Me
-            </a>
+           
+            <a href="mailto:nishmeetkaur@gmail.com" className="contact-btn">
+  Contact Me
+</a>
+
           </div>
         </div>
       </div>
