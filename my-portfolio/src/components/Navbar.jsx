@@ -13,8 +13,8 @@ const Navbar = () => {
           <a href="#home" data-tooltip="Home"><AiOutlineHome className="nav-icon" /></a>
           <a href="#projects" data-tooltip="Projects"><AiOutlineProject className="nav-icon" /></a>
         
-          <a href="#tools" data-tooltip="Tools"><AiOutlineTool className="nav-icon" /></a>
-          <a href="#phone" data-tooltip="Contact" ><MdOutlineContactPhone className="nav-icon" /></a>
+          <a href="#stats" data-tooltip="Tools"><AiOutlineTool className="nav-icon" /></a>
+          <a href="#about" data-tooltip="Contact" ><MdOutlineContactPhone className="nav-icon" /></a>
         </div>
       </div>
     </nav>
