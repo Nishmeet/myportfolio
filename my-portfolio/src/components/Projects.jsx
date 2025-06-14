@@ -28,8 +28,8 @@ const Projects = () => {
       title: "Portfolio App",
       description: "A mock e-commerce website for consumers to purchase robots.",
       tech: ["JavaScript", "React", "Node.js", "Express", "PostgreSQL"],
-      demoLink: "https://nishmeet.github.io/Protfoliomy/",
-      codeLink: "https://github.com/nishmeet/Protfoliomy",
+      demoLink: "https://nishmeet.github.io/Protfoliomygit/",
+      codeLink: "https://github.com/Nishmeet/myportfolio.git",
       image: project3  // Use the imported image directly
     }
   ];
