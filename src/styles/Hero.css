@@ -1,0 +1,686 @@
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;  /* Dark background like your screenshot */
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;  /* Changed to row for side-by-side layout */
+  align-items: center;
+  gap: 4rem;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-image-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;  /* Prevent image from shrinking */
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.text-content {
+  text-align: left;  /* Align text to left */
+  color: white;
+}
+
+.hero-title {
+  margin-bottom: 1.5rem;
+}
+
+.greeting {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.name {
+  font-size: 3.5rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.title {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: white;
+  display: flex;
+  gap: 0.1em;
+  justify-content: center;
+}
+
+.title span {
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.5rem;
+}
+
+.hero-description {
+  max-width: 600px;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: white;
+  color: #1a1a1a;
+  border: none;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+/* Stats section */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem;
+  color: white;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .title span {
+    font-size: 0.8em;
+  }
+}
+
+/* Background animations */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.animated-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid rgba(59, 130, 246, 0.1);
+  top: 10%;
+  right: 5%;
+  animation: rotate 20s linear infinite;
+}
+
+.animated-square {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(59, 130, 246, 0.1);
+  bottom: 10%;
+  left: 5%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.animated-dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #3b82f6 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.1;
+  animation: fade 3s ease-in-out infinite;
+}
+
+/* Update gradient overlay */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(59, 130, 246, 0.1)
+  );
+  z-index: 1;
+}
+
+/* Keyframe animations */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* Update hover effect */
+.profile-image-container:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover::before {
+  animation-play-state: paused;
+}
+
+/* Add these new animation styles */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations to elements */
+.animate-slide-down {
+  opacity: 0;
+  animation: slideDown 0.8s ease forwards;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 0.8s ease forwards 0.3s;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1.6s;
+}
+
+.animate-text span {
+  display: inline-block;
+  opacity: 0;
+  animation: popIn 0.6s ease forwards;
+}
+
+/* Update existing title styles */
+.title, .subtitle {
+  display: flex;
+  gap: 0.1em;
+  justify-content: center;
+}
+
+.title span, .subtitle span {
+  display: inline-block;
+}
+
+/* Optional hover effects */
+.profile-card:hover .vector-design svg {
+  transform: rotate(5deg);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover .vector-design2 svg {
+  transform: rotate(-5deg);
+  transition: transform 0.3s ease;
+}
+
+/* Add smooth transitions */
+.vector-design svg,
+.vector-design2 svg {
+  transition: transform 0.3s ease;
+}
+
+/* Keep your existing styles and add these new ones */
+.profile-image {
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* Update responsive styles if needed */
+@media (max-width: 768px) {
+  .title span, .subtitle span {
+    font-size: 0.8em;
+  }
+}
+
+/* Add or update these animation styles */
+.animated-text-container {
+  text-align: center;
+  width: 100%;
+}
+
+.animate-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: letterAnimation 0.5s ease forwards;
+}
+
+@keyframes letterAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1.6s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Update title and subtitle styles */
+.title, .subtitle {
+  font-size: 3rem;
+  color: white;
+  margin: 0;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  gap: 0.2em;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Update existing animation classes */
+.animate-slide-down {
+  opacity: 0;
+  animation: slideDown 0.8s ease forwards;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 0.8s ease forwards 0.3s;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keep your existing responsive styles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.8rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-letter {
+  display: inline-block;
+  opacity: 0;
+  animation: textAnimation 0.5s ease forwards;
+}
+
+/* Add these background design styles */
+.background-design {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, #FF7A00, #FFB800);
+  top: -50px;
+  right: -50px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.circle-2 {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, #FF7A00, #FF4D00);
+  bottom: 100px;
+  left: -50px;
+  animation: float 6s ease-in-out infinite reverse;
+}
+
+.circle-3 {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, #FFB800, #FF7A00);
+  top: 50%;
+  right: 15%;
+  animation: float 7s ease-in-out infinite;
+}
+
+.square {
+  position: absolute;
+  opacity: 0.08;
+  transform: rotate(45deg);
+}
+
+.square-1 {
+  width: 100px;
+  height: 100px;
+  background: #FF7A00;
+  top: 20%;
+  left: 10%;
+  animation: rotate 10s linear infinite;
+}
+
+.square-2 {
+  width: 150px;
+  height: 150px;
+  background: #FFB800;
+  bottom: 10%;
+  right: 20%;
+  animation: rotate 15s linear infinite reverse;
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #FF7A00 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.05;
+  animation: fade 3s ease-in-out infinite alternate;
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.03;
+  }
+  to {
+    opacity: 0.07;
+  }
+}
+
+/* Update hero section to accommodate background */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+/* Ensure content stays above background */
+.profile-card,
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional: Add glass effect to cards */
+.profile-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Add these new background styles */
+.background-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.shape1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 122, 0, 0.15);
+  top: -250px;
+  right: -100px;
+  animation: floatAnimation 8s infinite alternate;
+}
+
+.shape2 {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 184, 0, 0.15);
+  bottom: -150px;
+  left: -50px;
+  animation: floatAnimation 6s infinite alternate-reverse;
+}
+
+.shape3 {
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 122, 0, 0.1);
+  top: 40%;
+  left: 30%;
+  animation: floatAnimation 10s infinite alternate;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-20px) scale(1.1);
+  }
+} 

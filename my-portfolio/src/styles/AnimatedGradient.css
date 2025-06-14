@@ -1,0 +1,28 @@
+/* src/components/AnimatedGradient.css */
+.animated-gradient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; /* Behind content, but visible */
+  
+    /* Define the gradient and make it huge */
+    background: linear-gradient(270deg, #ff7a00, #c23409, #0d1117, #161b22);
+    background-size: 800% 800%;
+  
+    /* Animate the background position */
+    animation: animateGradient 15s ease infinite;
+  }
+  
+  @keyframes animateGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
