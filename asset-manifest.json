@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/myportfolio/static/css/main.4e1f4bfb.css",
+    "main.js": "/myportfolio/static/js/main.9bec558a.js",
+    "static/media/project1.png": "/myportfolio/static/media/project1.39998d7b59c4f4cf4b9d.png",
+    "static/media/project2.png": "/myportfolio/static/media/project2.7ef1a4e541171963a5b0.png",
+    "static/media/pic4.png": "/myportfolio/static/media/pic4.06f2fe41743016e23d53.png",
+    "static/media/newpic.png": "/myportfolio/static/media/newpic.7edc72258763aac3e0eb.png",
+    "static/media/project3.png": "/myportfolio/static/media/project3.5bb752c0fdfa2316c7c8.png",
+    "static/media/sqlite.png": "/myportfolio/static/media/sqlite.29ba537a71848a654594.png",
+    "static/media/python.png": "/myportfolio/static/media/python.d45bd1ea86ea29ad87d1.png",
+    "static/media/indesign.png": "/myportfolio/static/media/indesign.b43f7c896899b2d7f06e.png",
+    "static/media/illustrator.png": "/myportfolio/static/media/illustrator.68d5376f8faf0ca37619.png",
+    "static/media/photoshop.png": "/myportfolio/static/media/photoshop.fb246f127489d8edca5b.png",
+    "static/media/adobelightroom.png": "/myportfolio/static/media/adobelightroom.4775f9cb6c98ba694273.png",
+    "static/media/cypress.png": "/myportfolio/static/media/cypress.d21abcc5b628c1b70a96.png",
+    "index.html": "/myportfolio/index.html",
+    "main.4e1f4bfb.css.map": "/myportfolio/static/css/main.4e1f4bfb.css.map",
+    "main.9bec558a.js.map": "/myportfolio/static/js/main.9bec558a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e1f4bfb.css",
+    "static/js/main.9bec558a.js"
+  ]
+}
