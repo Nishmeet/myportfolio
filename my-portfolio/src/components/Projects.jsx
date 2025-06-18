@@ -11,8 +11,8 @@ const Projects = () => {
       title: "Real Estate Investment Calculator",
       description: "The Real Estate Investment Calculator is a smart tool designed to help investors make data-driven property decisions. It analyzes key financial metrics such as ROI, cash flow, cap rate, and break-even points—giving users a clear picture of a property’s investment potential.",
       tech: ["JavaScript", "React", "Node.js", "Express", "Firebase"],
-      demoLink: "https://nishmeet.github.io/Projectlogin/",
-      codeLink: "https://github.com/nishmeet/Projectlogin",
+      demoLink: "https://github.com/nageeb-damani/real-estate-evaluator-portal.git",
+      codeLink: "https://github.com/nageeb-damani/real-estate-evaluator-portal.git",
       image: project1  // Use the imported image directly
     },
     {
@@ -109,7 +109,7 @@ return (
           <p className="project-tech">{project.description}</p>
           
           <div className="project-links">
-    <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link demo">Demo</a>
+    <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link demo">View</a>
     <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-link code">Code</a>
   </div>
             </div>
